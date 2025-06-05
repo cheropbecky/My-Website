@@ -242,11 +242,12 @@ p{font-family: Roboto,Arial;
   .search-bar {
     font-size: 14px;
     height: 34px;
+    width: 30px;
   }
 
   .search-button {
     height: 34px;
-    width: 50px;
+    width: 25px;
   }
 
   .voice-search,
