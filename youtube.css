@@ -1,4 +1,7 @@
 /*header section*/
+*{
+  box-sizing: border-box;
+}
  body{
   font-size: 1rem;
   padding-top: 100px;
@@ -6,6 +9,10 @@
   padding-right: 24px;
   background-color:whitesmoke;
  } 
+ body.dark-mode{
+  background-color: #121212;
+  color: #eee;
+ }
 
 p{font-family: Roboto,Arial;
   margin-top: 0;
@@ -56,7 +63,7 @@ p{font-family: Roboto,Arial;
 }
 .search-bar{
   flex: 1;
-  height: 34px;
+  height:38px;
   padding-left: 10px;
   font-size: 16px;
   border-width: 1px;
@@ -204,6 +211,14 @@ p{font-family: Roboto,Arial;
     font-size: 10px;
     font-weight: 600;
   }
+  .close-sidebar{
+    display: none;
+    text-align: right;
+    padding: 10px 1px;
+    font-size: 20px;
+    font-weight: 500px;
+    cursor: pointer;
+  }
 
   /* video preview section*/
 .video-grid{
@@ -214,17 +229,82 @@ p{font-family: Roboto,Arial;
   z-index:0 ;
   color:black;
 }
-@media (max-width:750px){
-  .video-grid{
-    grid-template-columns:1fr 1fr;
+@media (max-width:600px){
+  
+  .close-sidebar{
+    display: block;
   }
-}
-@media (max-width:300px) and (min-width:0){
+  .middle-section{
+    margin: 0;
+    max-width: 100%;
+    flex: 1;
+  }
+  .search-bar {
+    font-size: 14px;
+    height: 34px;
+  }
+
+  .search-button {
+    height: 34px;
+    width: 50px;
+  }
+
+  .voice-search,
+  .right-section {
+    display: none;
+  }
+
+  .left-section {
+    width: auto;
+    margin-right: 10px;
+  }
+
+  .hamburger-menu {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .header {
+    padding: 0 10px;
+  }
+
+  body{
+    padding-left: 10px;
+    padding-right: 12px;
+    padding-top: 100px;
+  }
   .video-grid{
     grid-template-columns:1fr;
-    font-size:12px ;
+    row-gap: 40px;
+    flex-direction: column;
+    margin-left: 0;
+    padding-left: 0;
+    width: 100%;
+  }
+  .sidebar{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 80px;
+    background-color: white;
+    width: 100px;
+    height: calc(100% - 320px);
+    z-index: 10;
+    padding-top: 10px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  }
+  .sidebar.show{
+    display: block;
+  }
+  .video-title{
+    font-size: 14px;
+  }
+  .video-author,
+  .video-stats{
+    font-size: 11px;
   }
 }
+
 @media(min-width:1000px){
   .video-grid{
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -290,5 +370,4 @@ margin-bottom: 4px;
   border-radius: 2px;
   font-family: Roboto,arial;
  }
- 
  

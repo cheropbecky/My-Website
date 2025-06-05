@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="youtube.css">
-  <link rel="stylesheet" href="sidebar.css">
+ 
 </head>
 
 <body>
@@ -45,8 +45,7 @@
           <div class="notifications-count">3</div>
          
         </div>
-        
-          
+
 
          <img class="my-channel" src="youtube_channel/my-channel.jpeg">
       </div>
@@ -54,7 +53,8 @@
   
 
     <nav class="sidebar">
-      
+      <div class="close-sidebar">✖</div>
+
       <div class="sidebar-link"><img src="youtube_icons/home.svg" alt=""><div>Home</div></div>
       
       <div class="sidebar-link"><img src="youtube_icons/explore.svg" alt=""><div>Explore</div></div>
@@ -306,7 +306,20 @@
       </div>
     </div>
   
-  </main><!--end of video-grid-->
-  </div><!--end of homepage-->
+  </main>
+  </div>
+  <script>
+  const hamburgerMenu = document.querySelector('.hamburger-menu');
+  const sidebar = document.querySelector('.sidebar');
+  const closeSidebar = document.querySelector('.close-sidebar');
+
+  hamburgerMenu.addEventListener('click', () => {
+    sidebar.classList.add('show');
+  });
+
+  closeSidebar.addEventListener('click', () => {
+    sidebar.classList.remove('show')
+  });
+  </script>
 </body>
 </html>
