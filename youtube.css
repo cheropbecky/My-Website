@@ -66,11 +66,9 @@ p{font-family: Roboto,Arial;
   height:38px;
   padding-left: 10px;
   font-size: 16px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: gray;
+  border:2px solid rgb(15, 15, 15) ;
   border-radius:20px 0px 0px 20px;
-  box-shadow: inset 1px 1px 1px gray;
+  
 }
 .search-bar::placeholder{
   font-family: Roboto,Arial;
@@ -91,9 +89,7 @@ p{font-family: Roboto,Arial;
   height: 38px;
   width: 66px;
   background-color:rgb(218, 216, 216);
-  border-width: 1px;
-  border-style: solid;
-  border-color:gray;
+  border:2px solid rgb(15, 15, 15) ;
   margin-left: -1px;
   margin-right: 10px;
   position: relative;
@@ -289,7 +285,7 @@ p{font-family: Roboto,Arial;
     top: 80px;
     background-color: white;
     width: 100px;
-    height: calc(100% - 320px);
+    height: calc(100% - 80px);
     z-index: 10;
     padding-top: 10px;
     box-shadow: 2px 0 5px rgba(0,0,0,0.1);
